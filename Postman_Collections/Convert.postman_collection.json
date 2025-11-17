@@ -1,0 +1,1952 @@
+{
+	"info": {
+		"_postman_id": "8d94f54c-596f-4414-80ea-59272b970354",
+		"name": "Convert",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39572416",
+		"_collection_link": "https://migrateme.postman.co/workspace/MigrateMe-Workspace~ffc9a6a8-538b-4edd-983c-ce9e93689734/collection/39572416-8d94f54c-596f-4414-80ea-59272b970354?action=share&source=collection_link&creator=39572416"
+	},
+	"item": [
+		{
+			"name": "From CSV",
+			"item": [
+				{
+					"name": "CSV To XLSX",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"csv\",\n\"path\": \".//TestFiles//airports.csv\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//airports.xlsx\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV To Parquet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"csv\",\n\"path\": \".//TestFiles//Satellite_current_catalog.csv\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//Satellite_current_catalog.parquet\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV To XLS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"csv\",\n\"path\": \".//TestFiles//oil.csv\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//oil.xls\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV To JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"csv\",\n\"path\": \".//TestFiles//toulouse_public_library_loans.csv\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//toulouse_public_library_loans.json\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV To ORC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"csv\",\n\"path\": \".//TestFiles//sp500_2025_h1.csv\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//sp500_2025_h1.orc\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV To ODS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"csv\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.csv\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//metacritic_Toppc_games.ods\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV To Avro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"csv\",\n\"path\": \".//TestFiles//sales_record.csv\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//sales_record.avro\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From Folder",
+			"item": [
+				{
+					"name": "Folder To SQLite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"folder\",\n\"path\": \".//TestFiles//Group\"\n},\n\"output\": {\n\"type\": \"sqlite\",\n\"path\": \".//Output//Group.sqlite\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Folder To Postgresql",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"folder\",\n\"path\": \".//TestFiles//Group\"\n},\n\"output\":  {\n    \"type\": \"postgresql\",\n    \"url\": \"jdbc:postgresql://aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres\",\n    \"properties\": {\n    \"user\": \"postgres.qlkbtlccivlxzeaqnfjy\",\n    \"password\": {{Postgres_pwd}},\n    \"driver\": \"org.postgresql.Driver\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From PostgreSQL",
+			"item": [
+				{
+					"name": "Postgresql To CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n    \"type\": \"postgresql\",\n    \"url\": \"jdbc:postgresql://aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres\",\n    \"properties\": {\n    \"user\": \"postgres.qlkbtlccivlxzeaqnfjy\",\n    \"password\": {{Postgres_pwd}},\n    \"driver\": \"org.postgresql.Driver\"\n        }\n    },\n\"output\": {\n    \"type\": \"csv\",\n    \"path\": \".//Output//Group\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Postgresql to Postgresql",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n    \"type\": \"postgresql\",\n    \"url\": \"jdbc:postgresql://aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres\",\n    \"properties\": {\n    \"user\": \"postgres.wqbhtlyyrhbjqwurpunx\",\n    \"password\": {{Postgres_pwd2}},\n    \"driver\": \"org.postgresql.Driver\"\n        }\n    },\n\"output\":  {\n    \"type\": \"postgresql\",\n    \"url\": \"jdbc:postgresql://aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres\",\n    \"properties\": {\n    \"user\": \"postgres.qlkbtlccivlxzeaqnfjy\",\n    \"password\": {{Postgres_pwd}},\n    \"driver\": \"org.postgresql.Driver\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From XLS",
+			"item": [
+				{
+					"name": "XLS To CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xls\",\n\"path\": \".//TestFiles//oil.xls\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//oil.csv\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XLS To JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xls\",\n\"path\": \".//TestFiles//oil.xls\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//oil.json\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XLS To XLSX",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xls\",\n\"path\": \".//TestFiles//oil.xls\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//oil.xlsx\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XLS To ODS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xls\",\n\"path\": \".//TestFiles//oil.xls\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//oil.ods\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XLS To Parquet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xls\",\n\"path\": \".//TestFiles//oil.xls\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//oil.parquet\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XLS To ORC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xls\",\n\"path\": \".//TestFiles//oil.xls\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//oil.orc\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XLS To Avro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xls\",\n\"path\": \".//TestFiles//oil.xls\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//oil.avro\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From XLSX",
+			"item": [
+				{
+					"name": "XLSX To CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//airports.csv\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX To JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//airports.json\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX To XLS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//airports.xls\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//airports.xls\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX To ODS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//airports.ods\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//airports.ods\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX To Parquet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//airports.parquet\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//airports.parquet\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX To Avro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//airports.avro\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//airports.avro\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX To ORC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//airports.orc\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"xlsx\",\n\"path\": \".//TestFiles//airports.xlsx\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//airports.orc\"\n}\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From ODS",
+			"item": [
+				{
+					"name": "ODS To CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//metacritic_Toppc_games.csv\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//metacritic_Toppc_games.csv\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ODS To JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//metacritic_Toppc_games.json\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//metacritic_Toppc_games.json\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ODS To XLSX",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//metacritic_Toppc_games.xlsx\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//metacritic_Toppc_games.xlsx\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ODS To XLS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//metacritic_Toppc_games.xls\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//metacritic_Toppc_games.xls\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ODS To Parquet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//metacritic_Toppc_games.parquet\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//metacritic_Toppc_games.parquet\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ODS To Avro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//metacritic_Toppc_games.avro\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//metacritic_Toppc_games.avro\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ODS To ORC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//metacritic_Toppc_games.orc\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"ods\",\n\"path\": \".//TestFiles//metacritic_Toppc_games.ods\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//metacritic_Toppc_games.orc\"\n}\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From Avro",
+			"item": [
+				{
+					"name": "Avro To CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//sales_record.csv\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//sales_record.csv\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro To JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//sales_record.json\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//sales_record.json\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro To XLSX",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//sales_record.xlsx\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//sales_record.xlsx\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro To XLS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//sales_record.xls\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//sales_record.xls\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro To ODS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//sales_record.ods\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//sales_record.ods\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro To Parquet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//sales_record.parquet\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//sales_record.parquet\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro To ORC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//sales_record.orc\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"avro\",\n\"path\": \".//TestFiles//sales_record.avro\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//sales_record.orc\"\n}\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From Parquet",
+			"item": [
+				{
+					"name": "Parquet To CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//Satellite_current_catalog.csv\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//Satellite_current_catalog.csv\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet To JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//Satellite_current_catalog.json\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//Satellite_current_catalog.json\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet To XLSX",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//Satellite_current_catalog.xlsx\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//Satellite_current_catalog.xlsx\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet To XLS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//Satellite_current_catalog.xls\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//Satellite_current_catalog.xls\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet To ODS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//Satellite_current_catalog.ods\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//Satellite_current_catalog.ods\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet To Avro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//Satellite_current_catalog.avro\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//Satellite_current_catalog.avro\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet To ORC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//Satellite_current_catalog.orc\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"parquet\",\n\"path\": \".//TestFiles//Satellite_current_catalog.parquet\"\n},\n\"output\": {\n\"type\": \"orc\",\n\"path\": \".//Output//Satellite_current_catalog.orc\"\n}\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From ORC",
+			"item": [
+				{
+					"name": "ORC To CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//sp500_2025_h1.csv\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"csv\",\n\"path\": \".//Output//sp500_2025_h1.csv\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC To JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//sp500_2025_h1.json\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"json\",\n\"path\": \".//Output//sp500_2025_h1.json\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC To XLSX",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//sp500_2025_h1.xlsx\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"xlsx\",\n\"path\": \".//Output//sp500_2025_h1.xlsx\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC To XLS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//sp500_2025_h1.xls\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"xls\",\n\"path\": \".//Output//sp500_2025_h1.xls\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC To ODS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//sp500_2025_h1.ods\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"ods\",\n\"path\": \".//Output//sp500_2025_h1.ods\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC To Parquet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//sp500_2025_h1.parquet\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"parquet\",\n\"path\": \".//Output//sp500_2025_h1.parquet\"\n}\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC To Avro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//sp500_2025_h1.avro\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\n\"input\": {\n\"type\": \"orc\",\n\"path\": \".//TestFiles//sp500_2025_h1.orc\"\n},\n\"output\": {\n\"type\": \"avro\",\n\"path\": \".//Output//sp500_2025_h1.avro\"\n}\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From JSON",
+			"item": [
+				{
+					"name": "JSON To CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"csv\",\"path\":\"./Output/toulouse_public_library_loans.csv\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"csv\",\"path\":\"./Output/toulouse_public_library_loans.csv\"}}'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON To XLSX",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"xlsx\",\"path\":\"./Output/toulouse_public_library_loans.xlsx\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"xlsx\",\"path\":\"./Output/toulouse_public_library_loans.xlsx\"}}'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON To XLS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"xls\",\"path\":\"./Output/toulouse_public_library_loans.xls\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"xls\",\"path\":\"./Output/toulouse_public_library_loans.xls\"}}'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON To ODS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"ods\",\"path\":\"./Output/toulouse_public_library_loans.ods\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"ods\",\"path\":\"./Output/toulouse_public_library_loans.ods\"}}'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON To Parquet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"parquet\",\"path\":\"./Output/toulouse_public_library_loans.parquet\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"parquet\",\"path\":\"./Output/toulouse_public_library_loans.parquet\"}}'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON To Avro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"input\": {\r\n        \"type\": \"json\",\r\n        \"path\": \"./TestFiles/toulouse_public_library_loans.json\"\r\n    },\r\n    \"output\": {\r\n        \"type\": \"avro\",\r\n        \"path\": \"./Output/toulouse_public_library_loans.avro\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"avro\",\"path\":\"./Output/toulouse_public_library_loans.avro\"}}'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON To ORC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"orc\",\"path\":\"./Output/toulouse_public_library_loans.orc\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/convert",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"convert"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/convert' --header 'Content-Type: application/json' --data '{\"input\":{\"type\":\"json\",\"path\":\"./TestFiles/toulouse_public_library_loans.json\"},\"output\":{\"type\":\"orc\",\"path\":\"./Output/toulouse_public_library_loans.orc\"}}'"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://template.postman-echo.com"
+		},
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "Postgres_pwd",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "Postgres_pwd2",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

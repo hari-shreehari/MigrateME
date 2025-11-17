@@ -1,0 +1,1669 @@
+{
+	"info": {
+		"_postman_id": "1e2ab764-49df-45c4-b026-ecb2ca869d42",
+		"name": "Upload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39572416",
+		"_collection_link": "https://migrateme.postman.co/workspace/MigrateMe-Workspace~ffc9a6a8-538b-4edd-983c-ce9e93689734/collection/39572416-1e2ab764-49df-45c4-b026-ecb2ca869d42?action=share&source=collection_link&creator=39572416"
+	},
+	"item": [
+		{
+			"name": "From CSV",
+			"item": [
+				{
+					"name": "CSV To Avro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/metacritic_Toppc_games.csv"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"csv\"}, \"output\": {\"type\": \"avro\", \"path\": \"csv-avro\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV to JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"csv\"}, \"output\": {\"type\": \"json\", \"path\": \"csv-json\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"csv\\\"}, \\\"output\\\": {\\\"type\\\": \\\"json\\\", \\\"path\\\": \\\"csv-json\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "CSV to Parquet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"csv\"}, \"output\": {\"type\": \"parquet\", \"path\": \"csv-parquet\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"csv\\\"}, \\\"output\\\": {\\\"type\\\": \\\"parquet\\\", \\\"path\\\": \\\"csv-parquet\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "CSV to ORC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"csv\"}, \"output\": {\"type\": \"orc\", \"path\": \"csv-orc\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"csv\\\"}, \\\"output\\\": {\\\"type\\\": \\\"orc\\\", \\\"path\\\": \\\"csv-orc\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "CSV to XLS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"csv\"}, \"output\": {\"type\": \"xls\", \"path\": \"csv-xls\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"csv\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xls\\\", \\\"path\\\": \\\"csv-xls\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "CSV to XLSX",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"csv\"}, \"output\": {\"type\": \"xlsx\", \"path\": \"csv-xlsx\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"csv\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xlsx\\\", \\\"path\\\": \\\"csv-xlsx\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "CSV to ODS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"csv\"}, \"output\": {\"type\": \"ods\", \"path\": \"csv-ods\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.csv\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"csv\\\"}, \\\"output\\\": {\\\"type\\\": \\\"ods\\\", \\\"path\\\": \\\"csv-ods\\\"}}\"'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From JSON",
+			"item": [
+				{
+					"name": "JSON to CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"json\"}, \"output\": {\"type\": \"csv\", \"path\": \"json-csv\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"json\\\"}, \\\"output\\\": {\\\"type\\\": \\\"csv\\\", \\\"path\\\": \\\"json-csv\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON to Avro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"json\"}, \"output\": {\"type\": \"avro\", \"path\": \"json-avro\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"json\\\"}, \\\"output\\\": {\\\"type\\\": \\\"avro\\\", \\\"path\\\": \\\"json-avro\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON to Parquet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"json\"}, \"output\": {\"type\": \"parquet\", \"path\": \"json-parquet\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"json\\\"}, \\\"output\\\": {\\\"type\\\": \\\"parquet\\\", \\\"path\\\": \\\"json-parquet\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON to ORC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"json\"}, \"output\": {\"type\": \"orc\", \"path\": \"json-orc\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"json\\\"}, \\\"output\\\": {\\\"type\\\": \\\"orc\\\", \\\"path\\\": \\\"json-orc\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON to XLS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"json\"}, \"output\": {\"type\": \"xls\", \"path\": \"json-xls\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"json\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xls\\\", \\\"path\\\": \\\"json-xls\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON to XLSX",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"json\"}, \"output\": {\"type\": \"xlsx\", \"path\": \"json-xlsx\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"json\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xlsx\\\", \\\"path\\\": \\\"json-xlsx\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "JSON to ODS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"json\"}, \"output\": {\"type\": \"ods\", \"path\": \"json-ods\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/toulouse_public_library_loans.json\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"json\\\"}, \\\"output\\\": {\\\"type\\\": \\\"ods\\\", \\\"path\\\": \\\"json-ods\\\"}}\"'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From Avro",
+			"item": [
+				{
+					"name": "Avro to CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"avro\"}, \"output\": {\"type\": \"csv\", \"path\": \"avro-csv\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"avro\\\"}, \\\"output\\\": {\\\"type\\\": \\\"csv\\\", \\\"path\\\": \\\"avro-csv\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro to JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"avro\"}, \"output\": {\"type\": \"json\", \"path\": \"avro-json\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"avro\\\"}, \\\"output\\\": {\\\"type\\\": \\\"json\\\", \\\"path\\\": \\\"avro-json\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro to Parquet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"avro\"}, \"output\": {\"type\": \"parquet\", \"path\": \"avro-parquet\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"avro\\\"}, \\\"output\\\": {\\\"type\\\": \\\"parquet\\\", \\\"path\\\": \\\"avro-parquet\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro to ORC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"avro\"}, \"output\": {\"type\": \"orc\", \"path\": \"avro-orc\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"avro\\\"}, \\\"output\\\": {\\\"type\\\": \\\"orc\\\", \\\"path\\\": \\\"avro-orc\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro to XLS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"avro\"}, \"output\": {\"type\": \"xls\", \"path\": \"avro-xls\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"avro\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xls\\\", \\\"path\\\": \\\"avro-xls\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro to XLSX",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"avro\"}, \"output\": {\"type\": \"xlsx\", \"path\": \"avro-xlsx\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"avro\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xlsx\\\", \\\"path\\\": \\\"avro-xlsx\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Avro to ODS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"avro\"}, \"output\": {\"type\": \"ods\", \"path\": \"avro-ods\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sales_record.avro\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"avro\\\"}, \\\"output\\\": {\\\"type\\\": \\\"ods\\\", \\\"path\\\": \\\"avro-ods\\\"}}\"'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From ORC",
+			"item": [
+				{
+					"name": "ORC to CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"orc\"}, \"output\": {\"type\": \"csv\", \"path\": \"orc-csv\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"orc\\\"}, \\\"output\\\": {\\\"type\\\": \\\"csv\\\", \\\"path\\\": \\\"orc-csv\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC to JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"orc\"}, \"output\": {\"type\": \"json\", \"path\": \"orc-json\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"orc\\\"}, \\\"output\\\": {\\\"type\\\": \\\"json\\\", \\\"path\\\": \\\"orc-json\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC to Avro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"orc\"}, \"output\": {\"type\": \"avro\", \"path\": \"orc-avro\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"orc\\\"}, \\\"output\\\": {\\\"type\\\": \\\"avro\\\", \\\"path\\\": \\\"orc-avro\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC to Parquet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"orc\"}, \"output\": {\"type\": \"parquet\", \"path\": \"orc-parquet\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"orc\\\"}, \\\"output\\\": {\\\"type\\\": \\\"parquet\\\", \\\"path\\\": \\\"orc-parquet\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC to ODS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"orc\"}, \"output\": {\"type\": \"ods\", \"path\": \"orc-ods\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xlsx\\\"}, \\\"output\\\": {\\\"type\\\": \\\"ods\\\", \\\"path\\\": \\\"xlsx-ods\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC to XLS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"orc\"}, \"output\": {\"type\": \"xls\", \"path\": \"orc-xls\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"orc\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xls\\\", \\\"path\\\": \\\"orc-xls\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "ORC to XLSX",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"orc\"}, \"output\": {\"type\": \"xlsx\", \"path\": \"orc-xlsx\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/sp500_2025_h1.orc\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"orc\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xlsx\\\", \\\"path\\\": \\\"orc-xlsx\\\"}}\"'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From XLSX",
+			"item": [
+				{
+					"name": "XLSX to JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xlsx\"}, \"output\": {\"type\": \"json\", \"path\": \"xlsx-json\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xlsx\\\"}, \\\"output\\\": {\\\"type\\\": \\\"json\\\", \\\"path\\\": \\\"xlsx-json\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX to Avro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xlsx\"}, \"output\": {\"type\": \"avro\", \"path\": \"xlsx-avro\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xlsx\\\"}, \\\"output\\\": {\\\"type\\\": \\\"avro\\\", \\\"path\\\": \\\"xlsx-avro\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX to Parquet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xlsx\"}, \"output\": {\"type\": \"parquet\", \"path\": \"xlsx-parquet\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xlsx\\\"}, \\\"output\\\": {\\\"type\\\": \\\"parquet\\\", \\\"path\\\": \\\"xlsx-parquet\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX to ORC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xlsx\"}, \"output\": {\"type\": \"orc\", \"path\": \"xlsx-orc\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xlsx\\\"}, \\\"output\\\": {\\\"type\\\": \\\"orc\\\", \\\"path\\\": \\\"xlsx-orc\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX to XLS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xlsx\"}, \"output\": {\"type\": \"xls\", \"path\": \"xlsx-xls\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xlsx\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xls\\\", \\\"path\\\": \\\"xlsx-xls\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX to ODS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xlsx\"}, \"output\": {\"type\": \"ods\", \"path\": \"xlsx-ods\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xlsx\\\"}, \\\"output\\\": {\\\"type\\\": \\\"ods\\\", \\\"path\\\": \\\"xlsx-ods\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLSX to CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xlsx\"}, \"output\": {\"type\": \"csv\", \"path\": \"xlsx-csv\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/airports.xlsx\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xlsx\\\"}, \\\"output\\\": {\\\"type\\\": \\\"csv\\\", \\\"path\\\": \\\"xlsx-csv\\\"}}\"'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From Parquet",
+			"item": [
+				{
+					"name": "Parquet to CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"parquet\"}, \"output\": {\"type\": \"csv\", \"path\": \"parquet-csv\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"parquet\\\"}, \\\"output\\\": {\\\"type\\\": \\\"csv\\\", \\\"path\\\": \\\"parquet-csv\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet to JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"parquet\"}, \"output\": {\"type\": \"json\", \"path\": \"parquet-json\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"parquet\\\"}, \\\"output\\\": {\\\"type\\\": \\\"json\\\", \\\"path\\\": \\\"parquet-json\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet to Avro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"parquet\"}, \"output\": {\"type\": \"avro\", \"path\": \"parquet-avro\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"parquet\\\"}, \\\"output\\\": {\\\"type\\\": \\\"avro\\\", \\\"path\\\": \\\"parquet-avro\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet to ORC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"parquet\"}, \"output\": {\"type\": \"orc\", \"path\": \"parquet-orc\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"parquet\\\"}, \\\"output\\\": {\\\"type\\\": \\\"orc\\\", \\\"path\\\": \\\"parquet-orc\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet to XLS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"parquet\"}, \"output\": {\"type\": \"xls\", \"path\": \"parquet-xls\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"parquet\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xls\\\", \\\"path\\\": \\\"parquet-xls\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet to XLSX",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"parquet\"}, \"output\": {\"type\": \"xlsx\", \"path\": \"parquet-xlsx\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"parquet\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xlsx\\\", \\\"path\\\": \\\"parquet-xlsx\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "Parquet to ODS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"parquet\"}, \"output\": {\"type\": \"ods\", \"path\": \"parquet-ods\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/Satellite_current_catalog.parquet\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"parquet\\\"}, \\\"output\\\": {\\\"type\\\": \\\"ods\\\", \\\"path\\\": \\\"parquet-ods\\\"}}\"'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "From XLS",
+			"item": [
+				{
+					"name": "XLS to CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xls\"}, \"output\": {\"type\": \"csv\", \"path\": \"xls-csv\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xls\\\"}, \\\"output\\\": {\\\"type\\\": \\\"csv\\\", \\\"path\\\": \\\"xls-csv\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLS to JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xls\"}, \"output\": {\"type\": \"json\", \"path\": \"xls-json\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xls\\\"}, \\\"output\\\": {\\\"type\\\": \\\"json\\\", \\\"path\\\": \\\"xls-json\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLS to Avro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xls\"}, \"output\": {\"type\": \"avro\", \"path\": \"xls-avro\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xls\\\"}, \\\"output\\\": {\\\"type\\\": \\\"avro\\\", \\\"path\\\": \\\"xls-avro\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLS to Parquet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xls\"}, \"output\": {\"type\": \"parquet\", \"path\": \"xls-parquet\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xls\\\"}, \\\"output\\\": {\\\"type\\\": \\\"parquet\\\", \\\"path\\\": \\\"xls-parquet\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLS to ORC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xls\"}, \"output\": {\"type\": \"orc\", \"path\": \"xls-orc\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xls\\\"}, \\\"output\\\": {\\\"type\\\": \\\"orc\\\", \\\"path\\\": \\\"xls-orc\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLS to XLSX",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xls\"}, \"output\": {\"type\": \"xlsx\", \"path\": \"xls-xlsx\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xls\\\"}, \\\"output\\\": {\\\"type\\\": \\\"xlsx\\\", \\\"path\\\": \\\"xls-xlsx\\\"}}\"'"
+					},
+					"response": []
+				},
+				{
+					"name": "XLS to ODS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls"
+								},
+								{
+									"key": "request",
+									"value": "{\"input\": {\"type\": \"xls\"}, \"output\": {\"type\": \"ods\", \"path\": \"xls-ods\"}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl --location '{{baseURL}}/upload' --form 'file=@\"C:/Users/SHREEHARI/OneDrive/Desktop/MigrateMe_DB/TestFiles/oil.xls\"' --form 'request=\"{\\\"input\\\": {\\\"type\\\": \\\"xls\\\"}, \\\"output\\\": {\\\"type\\\": \\\"ods\\\", \\\"path\\\": \\\"xls-ods\\\"}}\"'"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

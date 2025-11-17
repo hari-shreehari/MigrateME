@@ -1,0 +1,14 @@
+fastapi
+pydantic
+pyspark
+plotly
+pymongo
+pandas
+python-multipart
+uvicorn
+openpyxl
+xlrd
+xlwt
+odfpy
+pyexcel
+pyexcel-xls
