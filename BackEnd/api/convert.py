@@ -43,16 +43,24 @@ async def convert_file(request: ConversionRequest):
 
         if input_type == "postgresql" and output_type == "postgresql":
             converter_module_name = "postgresql_to_postgresql"
+        elif input_type == "mysql" and output_type == "mysql":
+            converter_module_name = "mysql_to_mysql"
+        elif input_type == "mysql" and output_type == "postgresql":
+            converter_module_name = "mysql_to_postgresql"
         elif input_type == "mongodb" and output_type == "mongodb":
             converter_module_name = "mongodb_to_mongodb"
         elif input_type == "folder" and output_type == "postgresql":
             converter_module_name = "folder_to_postgresql"
+        elif input_type == "folder" and output_type == "mysql":
+            converter_module_name = "folder_to_mysql"
         elif input_type == "folder" and output_type == "mongodb":
             converter_module_name = "folder_to_mongodb"
         elif input_type == "folder" and output_type == "sqlite":
             converter_module_name = "folder_to_sqlite"
         elif input_type == "postgresql":
             converter_module_name = "postgresql_to_file"
+        elif input_type == "mysql":
+            converter_module_name = "mysql_to_file"
         elif input_type == "mongodb":
             converter_module_name = "mongodb_to_file"
         elif input_type == "sqlite":
